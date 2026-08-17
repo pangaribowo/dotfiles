@@ -1,0 +1,9 @@
+{
+    "workbench.colorTheme": "Abyss",
+    "php.validate.executablePath": "",
+    "tabnine.experimentalAutoImports": true,
+    "workbench.preferredHighContrastColorTheme": "Abyss",
+    "editor.cursorBlinking": "solid",
+    "editor.fontVariations": false,
+    "workbench.preferredLightColorTheme": "Default High Contrast Light"
+}
