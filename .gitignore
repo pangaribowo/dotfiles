@@ -1,0 +1,28 @@
+# Ignored files for security and cleanliness
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Never commit SSH private keys or certificates
+id_rsa
+id_rsa_*
+!id_rsa*.pub
+*.pem
+*.key
+*.p12
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+secrets.*
+credentials.json
+
+# System caches & temporary files
+.DS_Store
+Thumbs.db
+node_modules/
+.venv/
+__pycache__/
