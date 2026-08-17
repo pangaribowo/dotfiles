@@ -1,0 +1,17 @@
+# ==============================================================================
+# SSH Multi-Account Configuration Template
+# ==============================================================================
+
+# Main GitHub account
+Host github.com
+    Hostname ssh.github.com
+    Port 443
+    User git
+    IdentityFile ~/.ssh/id_rsa_main
+
+# Secondary GitHub account
+Host github.com-secondary
+    Hostname ssh.github.com
+    Port 443
+    User git
+    IdentityFile ~/.ssh/id_rsa_secondary

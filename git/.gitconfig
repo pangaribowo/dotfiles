@@ -1,0 +1,49 @@
+[user]
+	email = your_email@example.com
+	name = your_username
+[credential]
+	helper = git-credential-manager
+	credentialStore = gpg
+	helper = 
+	helper = /usr/local/bin/git-credential-manager
+
+[alias]
+    # Perintah dasar
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    df = diff
+    lg = log --oneline --graph --all --decorate
+
+    # Operasi pengambilan, pengiriman, dan integrasi
+    pl = pull
+    plo = pull origin
+    ps = push
+    rb = rebase
+    mg = merge
+
+    # Reset, Stash, dan lain-lain
+    rt = reset
+    rh = reset --hard
+    ss = stash
+    unstage = reset HEAD --
+    last = log -1 HEAD
+
+    # Alias dengan awalan "g" (singkatan) untuk perintah Git tertentu
+    ga = add
+    gci = commit -m
+    gca = commit --amend
+    gcm = checkout main
+    gcd = checkout dev
+    gcs = checkout staging
+    gbd = branch -d
+    gpo = push origin
+    gsta = stash
+    gstp = stash pop
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[http]
+	postBuffer = 524288000
+[init]
+	defaultBranch = main

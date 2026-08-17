@@ -1,0 +1,55 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_PERSONAL_ACCESS_TOKEN_HERE"
+      }
+    },
+    "postgresql": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://user:password@127.0.0.1:5432/postgres"],
+      "env": {}
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@executeautomation/playwright-mcp-server"],
+      "env": {}
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+      "env": {}
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "env": {}
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"]
+    },
+    "npm-helper": {
+      "command": "npx",
+      "args": ["-y", "@pinkpixel/npm-helper-mcp"]
+    },
+    "Prisma": {
+      "command": "npx",
+      "args": ["-y", "prisma", "mcp"]
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"]
+    },
+    "serena": {
+      "command": "uv",
+      "args": ["run", "--directory", "/opt/serena", "serena-mcp-server", "--project-file", "/opt/serena/.serena/project.yml"]
+    },
+    "portainer": {
+      "command": "/usr/local/bin/portainer-mcp",
+      "args": ["-server", "127.0.0.1:9443", "-token", "YOUR_PORTAINER_TOKEN_HERE", "-tools", "/usr/local/bin/tools.yaml"]
+    }
+  }
+}
