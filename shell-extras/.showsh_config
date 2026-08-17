@@ -1,0 +1,14 @@
+# Show.sh Configuration
+DIR_.angular=1
+DIR_vendor=1
+DIR_migrations=1
+DIR_dist=1
+DIR_node_modules=1
+DIR_.git=1
+DIR_assets=1
+FILE_package-lock.json=1
+FILE_main.js.backup=1
+FILE_main.new.js=1
+FILE_main.simplified.js=1
+FILE_yarn.lock=1
+FILE_main.js=1
