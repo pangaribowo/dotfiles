@@ -1,0 +1,65 @@
+# ~/.config/alacritty/alacritty.toml
+
+[[keyboard.bindings]]
+key = "c"
+mods = "Alt"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "v"
+mods = "Alt"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "Space"
+mods = "Control|Shift"
+action = "ToggleViMode"
+
+[font]
+size = 10.0
+
+[font.bold]
+family = "PlemolJP Console NF"
+style = "Bold"
+
+[font.bold_italic]
+family = "PlemolJP Console NF"
+style = "Bold Italic"
+
+[font.italic]
+family = "PlemolJP Console NF"
+style = "Italic"
+
+[font.normal]
+family = "PlemolJP Console NF"
+style = "Regular"
+
+[terminal.shell]
+program = "/bin/zsh"
+args = ["--login"]
+
+[window]
+opacity = 0.75             # Transparansi latar belakang
+padding = { x = 0, y = 0 }
+
+[colors]
+primary = { background = "#000000", foreground = "#00FF00" } # Latar hitam, teks hijau
+
+[cursor]
+style = "Block"
+vi_mode_style = "Block"
+blink_interval = 750
+unfocused_hollow = false
+
+[colors.cursor]
+text = "#00FF00"
+cursor = "#FF0000"
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[mouse]
+hide_when_typing = true # Sembunyikan kursor mouse saat mengetik
+
+[terminal]
