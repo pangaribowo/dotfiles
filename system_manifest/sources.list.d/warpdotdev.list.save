@@ -1,0 +1,4 @@
+### THIS FILE IS AUTOMATICALLY CONFIGURED ###
+# You may comment out this entry, but other modifications to the file may be lost.
+
+deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main
