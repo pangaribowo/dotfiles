@@ -1,0 +1,9 @@
+# /etc/udev/rules.d/60-usb-ssd.rules
+# Lenovo ThinkPad T470 - External ADATA SU650 via Realtek RTL9201 USB Bridge Optimization
+# Enforces non-rotational status, BFQ multi-queue I/O scheduler, queue parameters, and SCSI UNMAP (Hardware TRIM)
+
+# 1. Block Device Queue Optimization (Targeting RTL9201 0bda:9201)
+ACTION=="add|change", KERNEL=="sd[a-z]", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="9201", ATTR{queue/rotational}="0", ATTR{queue/scheduler}="bfq", ATTR{queue/nr_requests}="64", ATTR{queue/read_ahead_kb}="128"
+
+# 2. Hardware SCSI UNMAP (TRIM) Provisioning Mode for ADATA SU650 DRAM-less NAND Protection
+ACTION=="add|change", SUBSYSTEM=="scsi_disk", ATTRS{vendor}=="ADATA SU*", ATTR{provisioning_mode}="unmap"

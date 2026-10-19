@@ -1,0 +1,13 @@
+[Unit]
+Description=ThinkPad T470 Hardware IRQ Core Affinity Isolation
+After=multi-user.target
+
+[Service]
+Type=oneshot
+# IRQ 130 (Intel HD Graphics 520 GPU) -> Core 0 Primary (CPU0, mask 1)
+# IRQ 127 (xHCI USB 3.0 Host Controller / OS SSD) -> Core 1 Primary (CPU1, mask 2)
+ExecStart=/bin/sh -c 'echo 1 > /proc/irq/130/smp_affinity 2>/dev/null || true; echo 2 > /proc/irq/127/smp_affinity 2>/dev/null || true'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
